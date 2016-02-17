@@ -8,10 +8,10 @@ var init = function () { // wait for document ready
     controller = new ScrollMagic.Controller();
     // define movement of panels
     var wipeAnimation = new TimelineMax()
-        .fromTo("div.panel.second", 1, {x: "-100%"}, {x: "0%", ease: Linear.easeNone})  // in from left
-        .fromTo("div.panel.third",    1, {x:  "120%"}, {x: "0%", ease: Linear.easeNone})  // in from right
-        .fromTo("div.panel.fourth", 1, {y: "-100%"}, {y: "0%", ease: Linear.easeNone}) // in from top
-        .fromTo("div.panel.fifth", 1, {y: "100%"}, {y: "0%", ease: Linear.easeNone}); // in from bottom
+        .fromTo("div.panel.second", 1, {y: "80%"}, {y: "0%", ease: Linear.easeNone})  // in from left
+        .fromTo("div.panel.third",    1, {y:  "110%"}, {y: "0%", ease: Linear.easeNone})  // in from right
+        .fromTo("div.panel.fourth", 1, {y: "110%"}, {y: "0%", ease: Linear.easeNone}) // in from top
+        .fromTo("div.panel.fifth", 1, {y: "110%"}, {y: "0%", ease: Linear.easeNone}); // in from bottom
     // create scene to pin and link animation
     new ScrollMagic.Scene({
         triggerElement: "#pinContainer",
@@ -22,7 +22,9 @@ var init = function () { // wait for document ready
         .setTween(wipeAnimation)
         .addTo(controller);
 
+
 };
+
 
 
 
@@ -40,6 +42,6 @@ $("#mainButtonDown").click(function(){
 
 $("#secondButtonDown").click(function(){
     $('html, body').animate({
-        scrollTop: '+=1000%'
+        scrollTop: '+=1200%'
     }, 'slow');
 });
